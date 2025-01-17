@@ -1,7 +1,8 @@
----
+
 # Etusmail
 
-```bash
+
+```
 Etusmail is a cutting-edge Email Marketing AI Chatbot designed to revolutionize the way businesses communicate with their customers. By combining the power of artificial intelligence with automation, Etusmail helps organizations create highly personalized and efficient email campaigns, driving better engagement and conversions.
 ```
 ## Key Features:
