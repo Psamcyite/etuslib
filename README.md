@@ -84,7 +84,7 @@ The project leverages a modern and robust technology stack to ensure scalability
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/username/etusmail.git
+git clone https://github.com/psamcyite/etusmail.git
 
 cd etusmail
 ```
@@ -221,3 +221,18 @@ git push origin feature-name
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+---
+
+## Contact
+
+For inquiries or feedback, reach out to:
+
+Email: [etusmail.team@gmail.com](etusmail.team@gmail.com)
+
+Website: [https://etusmail.com](https://etusmail.com)
+
+Social medial: X, Instagram, linkedIn, Pinterest.
+```
+---
