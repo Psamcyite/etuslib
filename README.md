@@ -231,7 +231,7 @@ For inquiries or feedback, reach out to:
 
 Email: [etusmail.team@gmail.com](etusmail.team@gmail.com)
 
-Website: [https://etusmail.com](https://etusmail.com)
+Website: [https://www.etusmail.com](https://www.etusmail.com)
 
 Social medial: X, Instagram, linkedIn, Pinterest.
 ```
