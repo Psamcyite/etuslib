@@ -71,13 +71,13 @@ The project leverages a modern and robust technology stack to ensure scalability
 
 **Prerequisites**
 
-Node.js (v20+)
+- **Node.js (v20+)**
 
-yarn (v1.22+)
+- **yarn (v1.22+)**
 
-A GitHub account for version control.
+- **A GitHub account for version control.**
 
-Clerk, Stripe, Pusher, and Uploadcare API keys.
+- **Clerk, Stripe, Pusher, and Uploadcare API keys.**
 
 
 ## Local Development
