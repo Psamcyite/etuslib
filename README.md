@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+---
 
-First, run the development server:
+Etusmail
 
+
+```
+Etusmail is a cutting-edge Email Marketing AI Chatbot designed to revolutionize the way businesses communicate with their customers. By combining the power of artificial intelligence with automation, Etusmail helps organizations create highly personalized and efficient email campaigns, driving better engagement and conversions.
+```
+## Key Features:
+
+- **AI-Powered Personalization: Leverages customer data to create tailored email content.**
+- **Automation: Schedule, track, and optimize email campaigns effortlessly.**
+- **Scalability: Supports businesses of all sizes, from startups to enterprises.**
+- **Cost-Effective: Reduces manual effort, saving time and resources.**
+- **User-Friendly Dashboard: Manage campaigns, analyze metrics, and adjust strategies in real-time.**
+
+Etusmail is built to empower businesses, enabling them to focus on strategy while we handle the execution.
+---
+## Project Overview
+Etusmail is a full-stack web application that combines the power of AI, automation, and real-time communication to deliver a seamless email marketing experience. The platform is designed to help businesses create, manage, and optimize email campaigns with ease, driving better engagement and conversions.
+## Tech Stack
+The project leverages a modern and robust technology stack to ensure scalability, reliability, and performance:
+## Frontend
+- **Next.js 15: Framework for building server-rendered React applications.**
+- **TailwindCSS: For rapid and responsive UI development.**
+- **Uploadcare: File storage and management for uploading media.**
+
+## Backend
+- **Node.js: JavaScript runtime for building server-side applications.**
+- **Clerk: Authentication and user management.**
+- **Stripe: Payment processing for subscription plans.**
+- **Pusher: Real-time notifications and communication.**
+- **PostgreSQL: Database management.**
+
+## Tools & Utilities
+- **yarn: Dependency management.**
+- **Cloudways: Managed cloud hosting.**
+- **Vercel: Deployment and hosting.**
+- **Jest: Unit and integration testing framework.**
+- **CI/CD Pipelines: Continuous integration and delivery for smooth deployment.**
+---
+
+## Setup Instructions
+**Prerequisites**
+- **Node.js (v20+)**
+- **yarn (v1.22+)**
+- **A GitHub account for version control.**
+- **Clerk, Stripe, Pusher, and Uploadcare API keys.**
+
+## Local Development
+1. Clone the repository:
 ```bash
-npm run dev
-# or
+git clone https://github.com/psamcyite/etusmail.git
+cd etusmail
+```
+2. Install dependencies:
+```bash
+yarn install
+```
+3. Create a .env file in the root directory:
+```env
+NEXT_PUBLIC_CLERK_FRONTEND_API=<Clerk API Key>
+UPLOADCARE_PUBLIC_KEY=<Uploadcare Public Key>
+STRIPE_SECRET_KEY=<Stripe Secret Key>
+PUSHER_APP_ID=<Pusher App ID>
+PUSHER_APP_KEY=<Pusher App Key>
+PUSHER_APP_SECRET=<Pusher App Secret>
+DATABASE_URL=<PostgreSQL Database URL>
+```
+4. Run the development server:
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open your browser and visit:
+```bash
+http://localhost:3000
+```
+---
+## Features
+- **1. User Authentication**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Implemented with Clerk for seamless login and registration.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+- **2. Email Campaign Management**
 
-To learn more about Next.js, take a look at the following resources:
+AI-powered automation for creating and sending personalized email campaigns.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **3. Real-Time Notifications**
 
-## Deploy on Vercel
+Powered by Pusher for instant updates.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **4. File Management**
+Integrated Uploadcare for uploading and managing media files.
+- **5. Payments**
+Subscription management through Stripe for monetizing the platform.
+- **6. Deployment**
+Hosted on Vercel for performance and scalability.
+---
+## Testing
+1. Run unit tests with Jest:
+```bash
+yarn test
+```
+2. Test CI/CD pipelines through GitHub Actions or manual workflows.
+---
+## Project Workflow
+
+**Task Management**
+- **GitHub Projects**: Track tasks and issues with Kanban boards.
+- **WhatsApp Integration**: Real-time updates and communication.
+## Branches
+```bash
+main: Stable, production-ready code.
+dev: Development branch for testing new features.
+Feature branches (e.g., feature/auth, feature/payments) for isolated development.
+```
+---
+## Contributing
+Pull Request Guidelines
+1. Fork the repository.
+2. Create a new branch:
+```bash
+git checkout -b feature-name
+```
+3. Commit changes:
+```bash
+git commit -m "Add a descriptive message"
+```
+4. Push to your fork:
+```bash
+git push origin feature-name
+```
+5. Submit a pull request.
+---
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+---
+## Contact
+For inquiries or feedback, reach out to:
+Email: [etusmail.team@gmail.com](etusmail.team@gmail.com)
+Website: [https://www.etusmail.com](https://www.etusmail.com)
+Social medial: X, Instagram, linkedIn, Pinterest.
+```
+---
