@@ -1,0 +1,34 @@
+name: GitBot Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  gitbot:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Run GitBot
+      run: yarn run gitbot
+
+    - name: Add PR comment
+      if: github.event_name == 'pull_request'
+      run: gh pr comment ${{ github.event.pull_request.number }} --body "GitBot has reviewed your code!"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
