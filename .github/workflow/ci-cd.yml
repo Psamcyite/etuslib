@@ -1,5 +1,9 @@
 name: CI/CD
 
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
 on:
   push:
     branches:
@@ -24,11 +28,20 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+        # Run tests
       - name: Run tests
         run: yarn test
 
+        # Run Test in CI-CD Mode
+      - name: Run Unit Tests in CI-CD Mode
+        run: yarn test:ci-cd
+
       - name: Build project
         run: yarn build
+
+        # Check TypeScript Errors
+      - name: Check TypeScript Errors
+        run: yarn tsc
 
       - name: Deploy
         if: github.ref == 'refs/heads/main'
