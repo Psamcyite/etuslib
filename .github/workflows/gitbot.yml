@@ -1,34 +1,20 @@
-name: GitBot Workflow
+name: Add PR Comment
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
+    types: [opened, synchronize, reopened]
 
 jobs:
-  gitbot:
+  add-comment:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-
-    - name: Install dependencies
-      run: yarn install
-
-    - name: Run GitBot
-      run: yarn run gitbot
-
-    - name: Add PR comment
-      if: ${{ github.event_name == 'pull_request' }}
-      run: gh pr comment ${{ github.event.pull_request.number }} --body "GitBot has reviewed your code!"
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      - name: Add PR comment
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: "GitBot has reviewed your code!"
+            });
