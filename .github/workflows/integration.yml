@@ -1,4 +1,4 @@
-name: CI/CD
+name: CI
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -32,9 +32,9 @@ jobs:
       - name: Run tests
         run: yarn test
 
-        # Run Test in CI-CD Mode
-      - name: Run Unit Tests in CI-CD Mode
-        run: yarn test:ci-cd
+        # Run Test in CI Mode
+      - name: Run Unit Tests in CI Mode
+        run: yarn test:ci --coverage
 
       - name: Build project
         run: yarn build
