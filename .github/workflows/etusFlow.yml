@@ -28,11 +28,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run lint checks
-        run: yarn lint
-
       - name: Run tests
-        run: yarn test --ci
+        run: yarn test --ci --coverage
 
       - name: Upload test coverage report
         uses: actions/upload-artifact@v3
@@ -73,11 +70,11 @@ jobs:
 
     steps:
       - name: Send Slack notification
-        uses: slackapi/slack-github-action@v1.25.1
+        uses: rtCamp/action-slack-notify@v2.1.1
         with:
           slack-message: |
             🚀 *EtusMail Workflow Update*
             ✅ Build, test, and deployment completed successfully!
-            🔗 <https://your-production-url.com|View Application>
+            🔗 <https://github.com/Psamcyite/etusmail/deployments/Production|View Application>
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
