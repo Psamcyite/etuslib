@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Etusmail",
     description: "Etusmail is built to empower businesses, enabling them to focus on strategy while we handle the execution and deliver results.",
-    images: ["/assets/images/etusmail.svg"],
+    images: ["/assets/favicon.ico"],
   },
 };
 
@@ -34,9 +34,6 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <header>
-            <img src="/assets/images/etusmail.svg" alt="Etusmail Logo" />
-          </header>
           {children}
         </body>
       </html>
