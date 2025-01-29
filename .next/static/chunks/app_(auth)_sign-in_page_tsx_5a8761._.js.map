@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/blackmonk/GitHub/etusmail/app/%28auth%29/sign-in/page.tsx"],"sourcesContent":["\"use client\";\n\nimport React from \"react\";\nimport AuthForm from \"@/components/AuthForm\";\nimport { signInSchema } from \"@/lib/validations\";\nimport { signInWithCredentials } from \"@/lib/actions/auth\";\n\nconst Page = () => (\n  <AuthForm\n    type=\"SIGN_IN\"\n    schema={signInSchema}\n    defaultValues={{\n      email: \"\",\n      password: \"\",\n    }}\n    onSubmit={signInWithCredentials}\n  />\n);\n\nexport default Page;\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;AAAA;;;;;AAOA,MAAM,OAAO,kBACX,6LAAC;QACC,MAAK;QACL,QAAQ;QACR,eAAe;YACb,OAAO;YACP,UAAU;QACZ;QACA,UAAU;;;;;;KARR;uCAYS"}},
+    {"offset": {"line": 51, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
