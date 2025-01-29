@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/blackmonk/GitHub/etusmail/app/%28auth%29/sign-up/page.tsx"],"sourcesContent":["\"use client\";\n\nimport AuthForm from \"@/components/AuthForm\";\nimport { signUpSchema } from \"@/lib/validations\";\nimport { signUp } from \"@/lib/actions/auth\";\n\nconst Page = () => (\n  <AuthForm\n    type=\"SIGN_UP\"\n    schema={signUpSchema}\n    defaultValues={{\n      email: \"\",\n      password: \"\",\n      fullName: \"\",\n      universityId: 0,\n      universityCard: \"\",\n    }}\n    onSubmit={signUp}\n  />\n);\n\nexport default Page;\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;AAAA;;;;;AAMA,MAAM,OAAO,kBACX,8OAAC;QACC,MAAK;QACL,QAAQ;QACR,eAAe;YACb,OAAO;YACP,UAAU;YACV,UAAU;YACV,cAAc;YACd,gBAAgB;QAClB;QACA,UAAU;;;;;;uCAIC"}},
-    {"offset": {"line": 48, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

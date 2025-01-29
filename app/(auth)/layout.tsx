@@ -21,14 +21,16 @@ const Layout = async ({ children }: { children: ReactNode }) => {
         </div>
       </section>
 
-      <section className="auth-reverse-gif">
-        <Image
-          src="/images/gif/reverse.gif"
-          alt="auth illustration"
-          height={1000}
-          width={1000}
-          className="size-full object-cover"
-        />
+      <section className="relative flex-1">
+      <img
+        src="/assets/images/gif/reverse.gif"
+        alt="reverse gif"
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover"
+        width={500}
+        height={500}
+      />
+
       </section>
     </main>
   );
