@@ -23,8 +23,8 @@ const Layout = async ({ children }: { children: ReactNode }) => {
 
       <section className="relative flex-1">
       <img
-        src="/assets/images/gif/reverse.gif"
-        alt="reverse gif"
+        src="/assets/images/library.jpg"
+        alt="library"
         loading="lazy"
         className="absolute inset-0 w-full h-full object-cover"
         width={500}

@@ -1,4 +1,24 @@
-const config = {
+interface Config {
+  env: {
+    apiEndpoint: string;
+    prodApiEndpoint: string;
+    imagekit: {
+      publicKey: string;
+      urlEndpoint: string;
+      privateKey: string;
+    };
+    databaseUrl: string;
+    upstash: {
+      redisUrl: string;
+      redisToken: string;
+      qstashUrl: string;
+      qstashToken: string;
+    };
+    resendToken: string;
+  };
+}
+
+const config: Config = {
   env: {
     apiEndpoint: process.env.NEXT_PUBLIC_API_ENDPOINT!,
     prodApiEndpoint: process.env.NEXT_PUBLIC_PROD_API_ENDPOINT!,
