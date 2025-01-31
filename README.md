@@ -1,149 +1,111 @@
+# EtusLib
+
+EtusLib is a comprehensive library management platform designed to make managing and accessing library resources seamless for both users and administrators. Built as a monorepo, it integrates both the User Platform and Admin Dashboard for streamlined development and deployment.
 
 ---
 
-Etusmail
-
-
-```
-Etusmail is a cutting-edge Email Marketing AI Chatbot designed to revolutionize the way businesses communicate with their customers. By combining the power of artificial intelligence with automation, Etusmail helps organizations create highly personalized and efficient email campaigns, driving better engagement and conversions.
-```
-## Key Features:
-
-- **AI-Powered Personalization: Leverages customer data to create tailored email content.**
-- **Automation: Schedule, track, and optimize email campaigns effortlessly.**
-- **Scalability: Supports businesses of all sizes, from startups to enterprises.**
-- **Cost-Effective: Reduces manual effort, saving time and resources.**
-- **User-Friendly Dashboard: Manage campaigns, analyze metrics, and adjust strategies in real-time.**
-
-Etusmail is built to empower businesses, enabling them to focus on strategy while we handle the execution.
----
-## Project Overview
-Etusmail is a full-stack web application that combines the power of AI, automation, and real-time communication to deliver a seamless email marketing experience. The platform is designed to help businesses create, manage, and optimize email campaigns with ease, driving better engagement and conversions.
-## Tech Stack
-The project leverages a modern and robust technology stack to ensure scalability, reliability, and performance:
-## Frontend
-- **Next.js 15: Framework for building server-rendered React applications.**
-- **TailwindCSS: For rapid and responsive UI development.**
-- **Uploadcare: File storage and management for uploading media.**
-
-## Backend
-- **Node.js: JavaScript runtime for building server-side applications.**
-- **Clerk: Authentication and user management.**
-- **Stripe: Payment processing for subscription plans.**
-- **Pusher: Real-time notifications and communication.**
-- **PostgreSQL: Database management.**
-
-## Tools & Utilities
-- **yarn: Dependency management.**
-- **Cloudways: Managed cloud hosting.**
-- **Vercel: Deployment and hosting.**
-- **Jest: Unit and integration testing framework.**
-- **CI/CD Pipelines: Continuous integration and delivery for smooth deployment.**
----
-
-## Setup Instructions
-**Prerequisites**
-- **Node.js (v20+)**
-- **yarn (v1.22+)**
-- **A GitHub account for version control.**
-- **Clerk, Stripe, Pusher, and Uploadcare API keys.**
-
-## Local Development
-1. Clone the repository:
-```bash
-git clone https://github.com/psamcyite/etusmail.git
-cd etusmail
-```
-2. Install dependencies:
-```bash
-yarn install
-```
-3. Create a .env file in the root directory:
-```env
-NEXT_PUBLIC_CLERK_FRONTEND_API=<Clerk API Key>
-UPLOADCARE_PUBLIC_KEY=<Uploadcare Public Key>
-STRIPE_SECRET_KEY=<Stripe Secret Key>
-PUSHER_APP_ID=<Pusher App ID>
-PUSHER_APP_KEY=<Pusher App Key>
-PUSHER_APP_SECRET=<Pusher App Secret>
-DATABASE_URL=<PostgreSQL Database URL>
-```
-4. Run the development server:
-```bash
-yarn dev
-```
-
-5. Open your browser and visit:
-```bash
-http://localhost:3000
-```
----
 ## Features
-- **1. User Authentication**
 
-Implemented with Clerk for seamless login and registration.
+### User Platform
+- **SignUp & SignIn**: Secure user registration and login.
+- **Home**: Browse the latest and featured books.
+- **Search**: Find books by title, author, or category.
+- **Profile**: Manage user details and view borrowed books.
+- **Book Details**: View detailed information about books.
+- **Search Empty State**: Display a friendly message when no search results are found.
+- **Book Request Modal**: Request books not currently available in the library.
 
+### Admin Dashboard
+- **All Users**: View and manage user accounts.
+- **Home Admin Dashboard**: Overview of library stats and activity.
+- **Empty State Admin Dashboard**: Display a message when no data is available.
+- **All Books**: Manage the library’s collection.
+- **Book Details**: View and edit detailed information about books.
+- **Edit Book Details**: Update book information in the library.
+- **Account Requests**: Manage user account creation requests.
+  - **Deny**: Reject account requests.
+  - **Accept**: Approve account requests.
+- **Borrow Requests**: Handle user requests to borrow books.
+  - **Deny**: Reject borrow requests.
+  - **Accept**: Approve borrow requests.
 
-- **2. Email Campaign Management**
-
-AI-powered automation for creating and sending personalized email campaigns.
-
-
-- **3. Real-Time Notifications**
-
-Powered by Pusher for instant updates.
-
-
-- **4. File Management**
-Integrated Uploadcare for uploading and managing media files.
-- **5. Payments**
-Subscription management through Stripe for monetizing the platform.
-- **6. Deployment**
-Hosted on Vercel for performance and scalability.
 ---
-## Testing
-1. Run unit tests with Jest:
-```bash
-yarn test
-```
-2. Test CI/CD pipelines through GitHub Actions or manual workflows.
----
-## Project Workflow
 
-**Task Management**
-- **GitHub Projects**: Track tasks and issues with Kanban boards.
-- **WhatsApp Integration**: Real-time updates and communication.
-## Branches
-```bash
-main: Stable, production-ready code.
-dev: Development branch for testing new features.
-Feature branches (e.g., feature/auth, feature/payments) for isolated development.
-```
+## Tech Stack
+
+### Frameworks & Libraries
+- **Next.js**: Framework for server-side rendering and static site generation.
+- **TailwindCSS**: Utility-first CSS framework for fast and responsive UI design.
+- **Shadcn/UI**: Pre-built and customizable UI components.
+- **React Hook Form**: Simplified form handling and validation.
+
+### Backend
+- **NEON (PostgreSQL)**: Reliable and scalable database for storing application data.
+- **Drizzle**: Type-safe ORM for database management.
+
+### Utilities
+- **Imagekit**: For image storage and optimization.
+- **Upstash**: Serverless data storage for caching and queues.
+
 ---
-## Contributing
-Pull Request Guidelines
-1. Fork the repository.
-2. Create a new branch:
-```bash
-git checkout -b feature-name
+
+## Monorepo Structure
+
+This project uses a monorepo setup to combine the User Platform and Admin Dashboard, ensuring better code sharing and collaboration across the application.
+
+### Structure:
 ```
-3. Commit changes:
-```bash
-git commit -m "Add a descriptive message"
+/etuslib
+├── /apps
+│   ├── user-platform    # User-facing application
+│   └── admin-dashboard  # Admin-facing application
+├── /packages
+│   ├── ui-components    # Shared UI components
+│   ├── utils            # Shared utility functions
+│   └── hooks            # Shared React hooks
 ```
-4. Push to your fork:
-```bash
-git push origin feature-name
-```
-5. Submit a pull request.
+
 ---
+
+## Installation
+
+### Prerequisites
+- Node.js 16+
+- Yarn or pnpm (preferred package managers)
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Psamcyite/etuslib.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd etuslib
+   ```
+3. Install dependencies:
+   ```bash
+   yarn install
+   ```
+4. Start the development server:
+   ```bash
+   yarn dev
+   ```
+
+---
+
+## Contribution
+
+We welcome contributions! Feel free to submit issues or pull requests to improve the platform. Follow the contribution guidelines outlined in `CONTRIBUTING.md`.
+
+---
+
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+
+This project is licensed under the MIT License. See `LICENSE` for more details.
+
 ---
-## Contact
-For inquiries or feedback, reach out to:
-Email: [etusmail.team@gmail.com](etusmail.team@gmail.com)
-Website: [https://www.etusmail.com](https://www.etusmail.com)
-Social medial: X, Instagram, linkedIn, Pinterest.
-```
----
+
+## Acknowledgments
+
+Special thanks to the open-source community for the amazing tools and libraries used in this project.
+
