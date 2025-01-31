@@ -50,7 +50,10 @@ const AuthForm = <T extends FieldValues>({
   });
 
   const handleSubmit: SubmitHandler<T> = async (data) => {
+    console.log("Submitting form with data:", data);
+
     const result = await onSubmit(data);
+    console.log("Signup result:", result);
 
     if (result.success) {
       toast({
@@ -60,8 +63,14 @@ const AuthForm = <T extends FieldValues>({
           : "You have successfully signed up.",
       });
 
-      router.push("/");
+      setTimeout(() => {
+        console.log("Redirecting to home page...");
+        router.push("/");
+      }, 500); // Redirect to home page after 500ms
+
     } else {
+      console.error("Error signing in:", result.error);
+
       toast({
         title: `Error ${isSignIn ? "signing in" : "signing up"}`,
         description: result.error ?? "An error occurred.",

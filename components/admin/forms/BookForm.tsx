@@ -11,16 +11,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+} from "../../../components/ui/form";
+import { Input } from "../../../components/ui/input";
 import { useRouter } from "next/navigation";
-import { bookSchema } from "@/lib/validations";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import FileUpload from "@/components/FileUpload";
-import ColorPicker from "@/components/admin/ColorPicker";
-import { createBook } from "@/lib/admin/actions/book";
-import { toast } from "@/hooks/use-toast";
+import { bookSchema } from "../../../lib/validations";
+import { Textarea } from "../../../components/ui/textarea";
+import { Button } from "../../../components/ui/button";
+import FileUpload from "../../../components/FileUpload";
+import ColorPicker from "../../../components/admin/ColorPicker";
+import { createBook } from "../../../lib/admin/actions/book";
+import { toast } from "../../../hooks/use-toast";
 
 interface Props extends Partial<Book> {
   type?: "create" | "update";

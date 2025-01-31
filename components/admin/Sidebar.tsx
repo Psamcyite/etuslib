@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { adminSideBarLinks } from "@/constants";
+import { adminSideBarLinks } from "../../constants";
 import Link from "next/link";
-import { cn, getInitials } from "@/lib/utils";
+import { cn, getInitials } from "../../lib/utils";
 import { usePathname } from "next/navigation";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "../../components/ui/avatar";
 import { Session } from "next-auth";
 
 const Sidebar = ({ session }: { session: Session }) => {
@@ -16,12 +16,12 @@ const Sidebar = ({ session }: { session: Session }) => {
       <div>
         <div className="logo">
           <Image
-            src="/icons/admin/logo.svg"
+            src="/assets/images/EtusLib-logo.png"
             alt="logo"
             height={37}
             width={37}
           />
-          <h1>BookWise</h1>
+          <h1>EtusLib</h1>
         </div>
 
         <div className="mt-10 flex flex-col gap-5">
