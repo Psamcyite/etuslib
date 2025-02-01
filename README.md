@@ -53,16 +53,163 @@ EtusLib is a comprehensive library management platform designed to make managing
 
 This project uses a monorepo setup to combine the User Platform and Admin Dashboard, ensuring better code sharing and collaboration across the application.
 
-### Structure:
+## Root Directory
 ```
-/etuslib
-├── /apps
-│   ├── user-platform    # User-facing application
-│   └── admin-dashboard  # Admin-facing application
-├── /packages
-│   ├── ui-components    # Shared UI components
-│   ├── utils            # Shared utility functions
-│   └── hooks            # Shared React hooks
+etuslib/
+│── .gitattributes                 # Git attributes file
+│── .gitignore                     # Git ignore file
+│── LICENSE                        # Project license
+│── README.md                      # Project documentation
+│── auth.ts                         # Authentication functions
+│── components.json                 # Components metadata
+│── drizzle.config.ts                # Drizzle configuration
+│── dummybooks.json                  # Sample book data
+│── eslint.config.mjs                # ESLint configuration
+│── jest.config.ts                    # Jest testing configuration
+│── jest.setup.ts                     # Jest setup file
+│── middleware.ts                      # Middleware configuration
+│── next-env.d.ts                      # Next.js environment types
+│── next.config.ts                      # Next.js configuration
+│── package.json                        # Project dependencies and scripts
+│── postcss.config.mjs                    # PostCSS configuration
+```
+
+## Configuration and Workflows
+```
+│── .github/
+│   ├── workflows/
+│   │   ├── CODEOWNERS             # Code owners file
+│   │   ├── etusFlow.yml           # CI/CD workflow
+│   │   ├── gitbot.yml             # Git automation
+│   │   ├── integration.yml        # Integration workflow
+```
+
+## Source Code
+```
+│── app/
+│   ├── (auth)/
+│   │   ├── layout.tsx             # Authentication layout
+│   │   ├── sign-in/page.tsx       # Sign-in page
+│   │   ├── sign-up/page.tsx       # Sign-up page
+│   ├── (root)/
+│   │   ├── books/[id]/page.tsx    # Individual book page
+│   │   ├── layout.tsx             # Root layout
+│   │   ├── my-profile/page.tsx    # User profile page
+│   │   ├── page.tsx               # Home page
+│   ├── admin/
+│   │   ├── account-requests/page.tsx  # Admin account requests
+│   │   ├── book-requests/
+│   │   │   ├── page.tsx           # Book requests list
+│   │   │   ├── request/page.tsx   # Individual request page
+│   │   ├── books/
+│   │   │   ├── new/page.tsx       # Add new book page
+│   │   │   ├── page.tsx           # Books list
+│   │   ├── layout.tsx             # Admin layout
+│   │   ├── page.tsx               # Admin dashboard
+│   │   ├── users/page.tsx         # User management
+│   ├── api/
+│   │   ├── admin/borrow-requests/[id]/route.ts   # Borrow request API
+│   │   ├── auth/[...nextauth]/route.ts          # Authentication API
+│   │   ├── books/route.ts                        # Books API
+│   │   ├── borrow/route.ts                       # Borrow API
+│   │   ├── imagekit/route.ts                     # ImageKit API
+│   │   ├── workflows/onboarding/route.ts        # Onboarding workflow API
+│   ├── fonts/
+│   │   ├── BebasNeue-Regular.ttf                 # Font file
+│   │   ├── IBMPlexSans-Bold.ttf                  # Font file
+│   ├── globals.css                               # Global styles
+│   ├── layout.tsx                                # Main layout
+│   ├── too-fast/page.tsx                         # Speed warning page
+```
+
+## Components
+```
+│── components/
+│   ├── AuthForm.tsx               # Authentication form component
+│   ├── BackButton.tsx             # Back button component
+│   ├── BookCard.tsx               # Book card component
+│   ├── BookCover.tsx              # Book cover component
+│   ├── admin/
+│   │   ├── BorrowRequests.tsx     # Borrow requests component
+│   │   ├── ColorPicker.tsx        # Color picker component
+│   │   ├── Header.tsx             # Admin header component
+│   │   ├── Sidebar.tsx            # Admin sidebar component
+│   │   ├── forms/
+│   │   │   ├── BookForm.tsx      # Book form component
+│   ├── ui/
+│   │   ├── button.tsx             # UI Button component
+│   │   ├── dialog.tsx             # UI Dialog component
+│   │   ├── input.tsx              # UI Input component
+│   │   ├── toast.tsx              # UI Toast notifications
+```
+
+## Database
+```
+│── database/
+│   ├── drizzle.ts                 # Drizzle ORM setup
+│   ├── redis.ts                   # Redis setup
+│   ├── schema.ts                  # Database schema
+│   ├── seed.ts                    # Database seeding script
+```
+
+## Migrations
+```
+│── migrations/
+│   ├── 0000_tearful_romulus.sql   # Initial migration
+│   ├── meta/
+│   │   ├── 0000_snapshot.json     # Migration snapshot
+│   │   ├── _journal.json          # Migration journal
+```
+
+## Hooks
+```
+│── hooks/
+│   ├── use-toast.ts               # Toast hook
+```
+
+## Libraries
+```
+│── lib/
+│   ├── actions/
+│   │   ├── auth.ts                # Authentication actions
+│   │   ├── book.ts                # Book actions
+│   ├── admin/actions/book.ts      # Admin book actions
+│   ├── config.ts                  # Project configuration
+│   ├── db/route.ts                # Database route
+│   ├── ratelimit.ts               # Rate limiting logic
+│   ├── utils.ts                   # Utility functions
+│   ├── validations.ts             # Validation logic
+│   ├── workflow.ts                # Workflow handling
+```
+
+## Public Assets
+```
+│── public/
+│   ├── assets/
+│   │   ├── bilder/
+│   │   │   ├── bilder1.jpg        # Image assets
+│   │   │   ├── bilder10.png       # Image assets
+│   │   ├── icons/
+│   │   │   ├── cal.png            # Calendar icon
+│   │   │   ├── dashboard.png      # Dashboard icon
+│   │   │   ├── helpdesk.svg       # Helpdesk icon
+```
+
+## Tests
+```
+│── __test__/
+│   ├── sum.test.ts                # Unit test file
+│   ├── sum.ts                     # Sum function file
+```
+
+## Coverage Reports
+```
+│── coverage/
+│   ├── clover.xml                 # Clover coverage report
+│   ├── coverage-final.json         # Final coverage report
+│   ├── lcov-report/
+│   │   ├── index.html              # HTML coverage report
+│   │   ├── base.css                # Report styles
 ```
 
 ---
