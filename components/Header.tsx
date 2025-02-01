@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { signOut } from "../auth"; // Adjust the path as necessary
 import { Button } from "./ui/button";
+import UserAvatar from "./UserAvatar";
 
 const Header = () => {
   return (
@@ -20,7 +21,7 @@ const Header = () => {
             }}
             className="mb-10"
           >
-            <Button>Logout</Button>
+            <UserAvatar />
           </form>
         </li>
       </ul>
